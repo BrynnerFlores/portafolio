@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duralit S.A</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const userTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const initialTheme = userTheme || systemTheme;
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Brynner Flores</div>
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Inicio</a>
+                </nav>
+                <button id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="section-content">
+        <div class="project-header">
+            <h1>Duralit S.A</h1>
+        </div>
+        <section>
+            <h2>Descripción</h2>
+            <p>
+                Aplicación móvil desarrollada para Industrias Duralit S.A. con el objetivo de facilitar la cotización de materiales de construcción —especialmente tejas, cumbreras y limatesas— a partir de las dimensiones del techo proporcionadas por el cliente. La plataforma integra un catálogo interactivo, una herramienta de cálculo inteligente y la gestión de cotizaciones guardadas, permitiendo a distribuidores y clientes obtener estimaciones precisas en tiempo real desde sus dispositivos móviles.
+            </p>
+            <p>
+                Además, la aplicación incluye un módulo de perfil que permite a los usuarios gestionar su información personal, seguridad de la cuenta y preferencias. Desarrollada en Android con Java y backend en PHP/MySQL, la solución optimiza el proceso comercial al reducir tiempos de respuesta, mejorar la experiencia del cliente y centralizar la información técnica y comercial de la empresa en una única interfaz accesible.
+            </p>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <ul class="components-list">
+                <li>
+                    <strong>Catálogo</strong>
+                    <p>Permite al usuario explorar la oferta de la empresa a través de cuatro secciones: Productos (tejas, cumbreras y limatesas), Viviendas (modelos construidos con materiales Duralit), Preguntas Frecuentes (dudas comunes sobre instalación y garantías) y Pruebas de Calidad (certificaciones y especificaciones técnicas de los productos).</p>
+                </li>
+                <li>
+                    <strong>Cotización</strong>
+                    <p>Ofrece dos modalidades para calcular los materiales necesarios según las dimensiones del techo ingresadas por el usuario: Cotización Simple (cálculo básico) y Cotización Avanzada (configuración detallada con múltiples planos y pendientes). El sistema estima automáticamente la cantidad de tejas, cumbreras y limatesas requeridas.</p>
+                </li>
+                <li>
+                    <strong>Cotizaciones Guardadas</strong>
+                    <p>Permite al usuario consultar, revisar y reutilizar las cotizaciones previamente generadas y guardadas en su cuenta, facilitando el seguimiento de proyectos anteriores o la comparación de opciones.</p>
+                </li>
+                <li>
+                    <strong>Perfil</strong>
+                    <p>Permite al usuario visualizar y modificar su información personal, cambiar su contraseña, actualizar su foto de perfil y cerrar sesión de forma segura desde la aplicación móvil.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tecnologías Utilizadas</h2>
+            <div class="tech-badges-large">
+                <span>Android Studio</span>
+                <span>Java</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+            </div>
+        </section>
+        <section>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <a href="./img/img1.png" target="_blank" rel="noopener"><img src="./img/img1.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img2.png" target="_blank" rel="noopener"><img src="./img/img2.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img3.png" target="_blank" rel="noopener"><img src="./img/img3.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img4.png" target="_blank" rel="noopener"><img src="./img/img4.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img5.png" target="_blank" rel="noopener"><img src="./img/img5.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img6.png" target="_blank" rel="noopener"><img src="./img/img6.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img7.png" target="_blank" rel="noopener"><img src="./img/img7.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img8.png" target="_blank" rel="noopener"><img src="./img/img8.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img9.png" target="_blank" rel="noopener"><img src="./img/img9.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img10.png" target="_blank" rel="noopener"><img src="./img/img10.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img11.png" target="_blank" rel="noopener"><img src="./img/img11.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img12.png" target="_blank" rel="noopener"><img src="./img/img12.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img13.png" target="_blank" rel="noopener"><img src="./img/img13.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img14.png" target="_blank" rel="noopener"><img src="./img/img14.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img15.png" target="_blank" rel="noopener"><img src="./img/img15.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img16.png" target="_blank" rel="noopener"><img src="./img/img16.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img17.png" target="_blank" rel="noopener"><img src="./img/img17.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img18.png" target="_blank" rel="noopener"><img src="./img/img18.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img19.png" target="_blank" rel="noopener"><img src="./img/img19.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img20.png" target="_blank" rel="noopener"><img src="./img/img20.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img21.png" target="_blank" rel="noopener"><img src="./img/img21.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img22.png" target="_blank" rel="noopener"><img src="./img/img22.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img23.png" target="_blank" rel="noopener"><img src="./img/img23.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img24.png" target="_blank" rel="noopener"><img src="./img/img24.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img25.png" target="_blank" rel="noopener"><img src="./img/img25.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img26.png" target="_blank" rel="noopener"><img src="./img/img26.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img27.png" target="_blank" rel="noopener"><img src="./img/img27.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img28.png" target="_blank" rel="noopener"><img src="./img/img28.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img29.png" target="_blank" rel="noopener"><img src="./img/img29.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img30.png" target="_blank" rel="noopener"><img src="./img/img30.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img31.png" target="_blank" rel="noopener"><img src="./img/img31.png" alt="Pantalla de inicio"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 Brynner Flores.</p>
+        </div>
+    </footer>
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,95 +1,57 @@
-// Toggle Menú Mobile
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-// Animación suave al hacer scroll a secciones
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80, // Ajuste para header fijo
-        behavior: "smooth",
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
       });
-
-      // Cerrar menú móvil si está abierto
-      if (navMenu.classList.contains("active")) {
-        navMenu.classList.remove("active");
-      }
     }
   });
 });
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
 
-// Formulario de contacto
-const contactForm = document.getElementById("contact-form");
-const formMessage = document.getElementById("form-message");
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  const icon = themeToggle.querySelector('i');
+  icon.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+}
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  // Validación básica
-  if (!name || !email || !message) {
-    formMessage.textContent = "Por favor completa todos los campos.";
-    formMessage.className = "form-message error";
-    return;
-  }
-
-  if (!/\S+@\S+\.\S+/.test(email)) {
-    formMessage.textContent = "Ingresa un email válido.";
-    formMessage.className = "form-message error";
-    return;
-  }
-
-  // Simular envío (en producción usar fetch o un servicio como Formspree)
-  formMessage.textContent = "¡Gracias por tu mensaje! Te responderé pronto.";
-  formMessage.className = "form-message success";
-
-  // Limpiar formulario
-  contactForm.reset();
-
-  // Ocultar mensaje después de 5 segundos
-  setTimeout(() => {
-    formMessage.textContent = "";
-    formMessage.className = "form-message";
-  }, 5000);
-});
-
-// Añadir efecto de entrada suave a las secciones
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".about, .skills, .projects, .contact");
-
-  const observerOptions = {
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-      }
-    });
-  }, observerOptions);
-
-  sections.forEach((section) => {
-    section.style.opacity = "0";
-    section.style.transition = "opacity 0.8s ease";
-    observer.observe(section);
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
   });
 
-  // Agregar clase cuando se ve
-  observer.onEnter = (entry) => {
-    entry.target.style.opacity = "1";
-  };
+  window.addEventListener('DOMContentLoaded', () => {
+    const current = html.getAttribute('data-theme');
+    const icon = themeToggle.querySelector('i');
+    icon.className = current === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+  });
+}
+document.querySelectorAll('.copy-btn').forEach(button => {
+  button.addEventListener('click', async () => {
+    const textToCopy = button.getAttribute('data-clipboard');
+    const feedbackId = button.closest('.contact-item').querySelector('.copy-feedback').id;
+    const feedback = document.getElementById(feedbackId);
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      feedback.textContent = '¡Copiado!';
+      feedback.classList.add('show');
+      setTimeout(() => {
+        feedback.classList.remove('show');
+      }, 1500);
+    } catch (err) {
+      feedback.textContent = 'Error';
+      feedback.classList.add('show');
+      setTimeout(() => {
+        feedback.classList.remove('show');
+      }, 1500);
+    }
+  });
 });

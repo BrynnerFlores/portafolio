@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kytcla - Educación Contínua</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const userTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const initialTheme = userTheme || systemTheme;
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Brynner Flores</div>
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Inicio</a>
+                </nav>
+                <button id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="section-content">
+        <div class="project-header">
+            <h1>Kytcla - Educación Contínua</h1>
+        </div>
+        <section>
+            <h2>Descripción</h2>
+            <p>
+                Aplicación móvil educativa y comercial desarrollada para Kytcla, diseñada para promover cursos de formación continua y productos especializados. La plataforma ofrece una experiencia intuitiva para explorar, guardar y solicitar información sobre ofertas académicas y comerciales, priorizando la interacción directa con el equipo de ventas a través de WhatsApp.
+            </p>
+            <p>
+                Al no incluir un sistema de compras en línea, la aplicación se enfoca en la generación de leads y el acompañamiento personalizado, permitiendo a los usuarios inscribirse en cursos, guardar sus intereses y contactar de forma inmediata al responsable correspondiente. Desarrollada en Android con Java y backend en PHP/MySQL, combina funcionalidad técnica con una propuesta de valor centrada en la cercanía y el servicio humano.
+            </p>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <ul class="components-list">
+                <li>
+                    <strong>Gestión de Cursos</strong>
+                    <p>Permite las operaciones básicas de crear, modificar, eliminar y listar cursos. Adicionalmente cuenta con opciones para completar un formulario para inscribirse y solicitar mayor información por medio de WhatsApp.</p>
+                    <br>
+                    <p>Al momento de crear un curso, solo es posible agregar una imágen que corresponde al logo del curso.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Productos</strong>
+                    <p>Permite las operaciones básicas de crear, modificar, eliminar y listar productos. Adicionalmente cuenta con opciones para solicitar mayor información por medio de WhatsApp.</p>
+                    <br>
+                    <p>La aplicacion no gestiona la compra en línea, por lo que si a un usuario le interesa un producto, debe contactarse por medio de WhatsApp con el/la responsable de ventas. Existe un botón en la descripción de cada producto para que pueda ponerse en contacto directamente con el/la responsable de ventas.</p>
+                    <br>
+                    <p>Al momento de crear un producto, solo es posible agregar una imágen por producto.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Elementos Guardados</strong>
+                    <p>Cuando el usuario este viendo los detalles de un curso o un producto, tiene la posibilidad de guardarlo para separarlo como sus elementos preferentes.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Perfil</strong>
+                    <p>El usuario tiene la posibilidad de modificar los datos de su perfil público.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Cuenta</strong>
+                    <p>El usuario tiene la posibilidad de modificar su contraseña.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tecnologías Utilizadas</h2>
+            <div class="tech-badges-large">
+                <span>Android</span>
+                <span>Java</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+            </div>
+        </section>
+        <section>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <a href="./img/img1.png" target="_blank" rel="noopener"><img src="./img/img1.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img2.png" target="_blank" rel="noopener"><img src="./img/img2.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img3.png" target="_blank" rel="noopener"><img src="./img/img3.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img4.png" target="_blank" rel="noopener"><img src="./img/img4.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img5.png" target="_blank" rel="noopener"><img src="./img/img5.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img6.png" target="_blank" rel="noopener"><img src="./img/img6.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img7.png" target="_blank" rel="noopener"><img src="./img/img7.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img8.png" target="_blank" rel="noopener"><img src="./img/img8.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img9.png" target="_blank" rel="noopener"><img src="./img/img9.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img10.png" target="_blank" rel="noopener"><img src="./img/img10.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img11.png" target="_blank" rel="noopener"><img src="./img/img11.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img12.png" target="_blank" rel="noopener"><img src="./img/img12.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img13.png" target="_blank" rel="noopener"><img src="./img/img13.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img14.png" target="_blank" rel="noopener"><img src="./img/img14.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img15.png" target="_blank" rel="noopener"><img src="./img/img15.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img16.png" target="_blank" rel="noopener"><img src="./img/img16.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img17.png" target="_blank" rel="noopener"><img src="./img/img17.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img18.png" target="_blank" rel="noopener"><img src="./img/img18.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img19.png" target="_blank" rel="noopener"><img src="./img/img19.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img20.png" target="_blank" rel="noopener"><img src="./img/img20.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img21.png" target="_blank" rel="noopener"><img src="./img/img21.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img22.png" target="_blank" rel="noopener"><img src="./img/img22.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img23.png" target="_blank" rel="noopener"><img src="./img/img23.png" alt="Pantalla de inicio"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 Brynner Flores.</p>
+        </div>
+    </footer>
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

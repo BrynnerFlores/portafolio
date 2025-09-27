@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIET - Sistema de Información de Enfermedades Tropicales</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const userTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const initialTheme = userTheme || systemTheme;
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Brynner Flores</div>
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Inicio</a>
+                </nav>
+                <button id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="section-content">
+        <div class="project-header">
+            <h1>SIET - Sistema de Información de Enfermedades Tropicales</h1>
+        </div>
+        <section>
+            <h2>Descripción</h2>
+            <p>
+                Sistema integral de gestión para laboratorios clínicos, diseñado para optimizar y digitalizar los procesos operativos del Centro Regional de Enfermedades Tropicales (CERETROP). La plataforma centraliza la administración de pacientes, personal técnico, reactivos, equipos, estudios y generación de informes, garantizando trazabilidad, eficiencia y cumplimiento normativo.
+            </p>
+            <br>
+            <p>
+                Desarrollado como una aplicación de escritorio en Java con base de datos PostgreSQL, el sistema prioriza la usabilidad del personal técnico y la integridad de los datos médicos, permitiendo un seguimiento clínico riguroso, control de inventario inteligente y reportes automatizados para entidades gubernamentales como el SNIS.
+            </p>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <ul class="components-list">
+                <li>
+                    <strong>Gestión de Recepciones</strong>
+                    <p>Se realiza los procesos de registrar y modificar a un paciente con sus exámenes que estén solicitando, ingresar los resultados de los exámenes e iniciar seguimientos en caso de que sean necesarios y también se gestiona los establecimientos de las cuales fueron derivados.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Perfil</strong>
+                    <p>El usuario de la cuenta podrá realizar modificaciones de su información personal y también cambiar su contraseña en caso de que lo requiera.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Pacientes</strong>
+                    <p>Se obtiene una lista de todos los pacientes que acudieron al laboratorio, se puede obtener su historial clínico e identificar qué pacientes están bajo seguimiento.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Personal Técnico</strong>
+                    <p>Se obtiene una lista de todo el personal técnico que está activo en el laboratorio. Se puede agregar a nuevo personal técnico siempre y cuando este primeramente registrado, se puede dar de baja a un personal técnico que ya no esté trabajando en el laboratorio y restablecer la contraseña de la cuenta de algún usuario que lo haya olvidado y lo solicite de manera personal al encargado del laboratorio.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Reactivos</strong>
+                    <p>En este componente se realiza el control de los reactivos que fueron entregados al laboratorio, que caducaron y los que se consumieron. El software ordena los reactivos de acuerdo a su fecha de vencimiento para que así el personal técnico pueda consumir los reactivos que están más próximos a su fecha de vencimiento. También muestra la cantidad de reactivos disponibles en almacén.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Equipos</strong>
+                    <p>En este componente se realiza el control de los equipos del laboratorio, tanto de los que están activos, equipos en intervención y los que están dados de baja. También se puede obtener un historial de cada equipo para conocer por todas las intervenciones (mantenimientos, reparaciones, etc.) por las que haya pasado el equipo hasta la fecha o durante toda su vida útil.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Estudios</strong>
+                    <p>En este componente se realiza el control de todos los exámenes que realiza el laboratorio, permitiendo y dando la facilidad que el o la encargado(a) del laboratorio pueda registrar nuevos exámenes que el laboratorio, en un futuro, pueda implementar. También se permite controlar las muestras biológicas que son permisibles en cada estudio.</p>
+                </li>
+                <li>
+                    <strong>Gestión de Informes</strong>
+                    <p>En este componente se genera el Informe Mensual en formato PDF para que luego pueda ser cargado al SNIS.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tecnologías Utilizadas</h2>
+            <div class="tech-badges-large">
+                <span>Java</span>
+                <span>NetBeans</span>
+                <span>PostgreSQL</span>
+            </div>
+        </section>
+        <section>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <a href="./img/img1.png" target="_blank" rel="noopener"><img src="./img/img1.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img2.png" target="_blank" rel="noopener"><img src="./img/img2.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img3.png" target="_blank" rel="noopener"><img src="./img/img3.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img4.png" target="_blank" rel="noopener"><img src="./img/img4.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img5.png" target="_blank" rel="noopener"><img src="./img/img5.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img6.png" target="_blank" rel="noopener"><img src="./img/img6.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img7.png" target="_blank" rel="noopener"><img src="./img/img7.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img8.png" target="_blank" rel="noopener"><img src="./img/img8.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img9.png" target="_blank" rel="noopener"><img src="./img/img9.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img10.png" target="_blank" rel="noopener"><img src="./img/img10.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img11.png" target="_blank" rel="noopener"><img src="./img/img11.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img12.png" target="_blank" rel="noopener"><img src="./img/img12.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img13.png" target="_blank" rel="noopener"><img src="./img/img13.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img14.png" target="_blank" rel="noopener"><img src="./img/img14.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img15.png" target="_blank" rel="noopener"><img src="./img/img15.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img16.png" target="_blank" rel="noopener"><img src="./img/img16.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img17.png" target="_blank" rel="noopener"><img src="./img/img17.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img18.png" target="_blank" rel="noopener"><img src="./img/img18.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img19.png" target="_blank" rel="noopener"><img src="./img/img19.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img20.png" target="_blank" rel="noopener"><img src="./img/img20.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img21.png" target="_blank" rel="noopener"><img src="./img/img21.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img22.png" target="_blank" rel="noopener"><img src="./img/img22.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img23.png" target="_blank" rel="noopener"><img src="./img/img23.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img24.png" target="_blank" rel="noopener"><img src="./img/img24.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img25.png" target="_blank" rel="noopener"><img src="./img/img25.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img26.png" target="_blank" rel="noopener"><img src="./img/img26.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img27.png" target="_blank" rel="noopener"><img src="./img/img27.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img28.png" target="_blank" rel="noopener"><img src="./img/img28.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img29.png" target="_blank" rel="noopener"><img src="./img/img29.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img30.png" target="_blank" rel="noopener"><img src="./img/img30.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img31.png" target="_blank" rel="noopener"><img src="./img/img31.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img32.png" target="_blank" rel="noopener"><img src="./img/img32.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img33.png" target="_blank" rel="noopener"><img src="./img/img33.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img34.png" target="_blank" rel="noopener"><img src="./img/img34.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img35.png" target="_blank" rel="noopener"><img src="./img/img35.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img36.png" target="_blank" rel="noopener"><img src="./img/img36.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img37.png" target="_blank" rel="noopener"><img src="./img/img37.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img38.png" target="_blank" rel="noopener"><img src="./img/img38.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img39.png" target="_blank" rel="noopener"><img src="./img/img39.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img40.png" target="_blank" rel="noopener"><img src="./img/img40.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img41.png" target="_blank" rel="noopener"><img src="./img/img41.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img42.png" target="_blank" rel="noopener"><img src="./img/img42.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img43.png" target="_blank" rel="noopener"><img src="./img/img43.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img44.png" target="_blank" rel="noopener"><img src="./img/img44.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img45.png" target="_blank" rel="noopener"><img src="./img/img45.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img46.png" target="_blank" rel="noopener"><img src="./img/img46.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img47.png" target="_blank" rel="noopener"><img src="./img/img47.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img48.png" target="_blank" rel="noopener"><img src="./img/img48.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img49.png" target="_blank" rel="noopener"><img src="./img/img49.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img50.png" target="_blank" rel="noopener"><img src="./img/img50.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img51.png" target="_blank" rel="noopener"><img src="./img/img51.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img52.png" target="_blank" rel="noopener"><img src="./img/img52.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img53.png" target="_blank" rel="noopener"><img src="./img/img53.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img54.png" target="_blank" rel="noopener"><img src="./img/img54.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img55.png" target="_blank" rel="noopener"><img src="./img/img55.png" alt="Pantalla de inicio"></a>
+                <a href="./img/img56.png" target="_blank" rel="noopener"><img src="./img/img56.png" alt="Pantalla de inicio"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 Brynner Flores.</p>
+        </div>
+    </footer>
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

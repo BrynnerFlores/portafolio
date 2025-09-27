@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univalle Móvil</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const userTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const initialTheme = userTheme || systemTheme;
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Brynner Flores</div>
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Inicio</a>
+                </nav>
+                <button id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="section-content">
+        <div class="project-header">
+            <h1>Univalle Móvil</h1>
+        </div>
+        <section>
+            <h2>Descripción</h2>
+            <p>
+                Aplicación móvil exclusiva para estudiantes de la Universidad Privada del Valle (UNIVALLE), diseñada como un centro integral de información, gestión académica y apoyo universitario. La plataforma permite a los estudiantes acceder en tiempo real a sus horarios, calificaciones, documentos oficiales, materias inscritas y recursos institucionales, todo desde un entorno unificado y optimizado para dispositivos móviles.
+            </p>
+            <p>
+                Además de la gestión académica, la app fomenta la interacción con la universidad mediante canales de consulta, sugerencias y contacto, y ofrece contenido de orientación a través de secciones como "Tips" y "Lugares de Interés". Desarrollada como una solución multiplataforma con Flutter, garantiza autenticación segura, sincronización con servicios y una experiencia de usuario fluida y personalizada.
+            </p>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <ul class="components-list">
+                <li>
+                    <strong>Social</strong>
+                    <p>Permite a los estudiantes interactuar con la universidad a través de tres canales: Consultas (para resolver dudas académicas o administrativas), Contáctenos (acceso directo a áreas institucionales) y Sugerencias (espacio para proponer mejoras o ideas para la comunidad universitaria).</p>
+                </li>
+                <li>
+                    <strong>Materias</strong>
+                    <p>Brinda acceso a la información detallada de las materias inscritas por el estudiante, incluyendo contenido programático, docentes asignados, avances y recursos asociados a cada asignatura.</p>
+                </li>
+                <li>
+                    <strong>Académica</strong>
+                    <p>Centraliza la gestión académica del estudiante mediante tres funcionalidades clave: Documentos (acceso a certificados, kardex y otros trámites), Horarios (visualización del cronograma semanal de clases) y Notas (consulta de calificaciones parciales y finales por materia).</p>
+                </li>
+                <li>
+                    <strong>Recursos</strong>
+                    <p>Ofrece información útil para la vida universitaria a través de cuatro secciones: Biblioteca (acceso a catálogos y recursos digitales), Lugares de Interés (ubicación de oficinas, laboratorios y servicios universitarios), Matrícula (guía y estado del proceso de inscripción) y Costo (detalle de aranceles y pagos pendientes).</p>
+                </li>
+                <li>
+                    <strong>Tips</strong>
+                    <p>Entrega contenido de apoyo y orientación al estudiante mediante dos categorías: Lugares de Pago (información sobre puntos autorizados para realizar pagos universitarios) y Sabías que (datos útiles, fechas importantes, consejos académicos y curiosidades institucionales).</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tecnologías Utilizadas</h2>
+            <div class="tech-badges-large">
+                <span>Flutter</span>
+                <span>C#</span>
+                <span>.NET Core</span>
+            </div>
+        </section>
+        <section>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <a href="./img/img1.jpg" target="_blank" rel="noopener"><img src="./img/img1.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img2.jpg" target="_blank" rel="noopener"><img src="./img/img2.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img3.jpg" target="_blank" rel="noopener"><img src="./img/img3.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img4.jpg" target="_blank" rel="noopener"><img src="./img/img4.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img5.jpg" target="_blank" rel="noopener"><img src="./img/img5.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img6.jpg" target="_blank" rel="noopener"><img src="./img/img6.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img7.jpg" target="_blank" rel="noopener"><img src="./img/img7.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img8.jpg" target="_blank" rel="noopener"><img src="./img/img8.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img9.jpg" target="_blank" rel="noopener"><img src="./img/img9.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img10.jpg" target="_blank" rel="noopener"><img src="./img/img10.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img11.jpg" target="_blank" rel="noopener"><img src="./img/img11.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img12.jpg" target="_blank" rel="noopener"><img src="./img/img12.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img13.jpg" target="_blank" rel="noopener"><img src="./img/img13.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img14.jpg" target="_blank" rel="noopener"><img src="./img/img14.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img15.jpg" target="_blank" rel="noopener"><img src="./img/img15.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img16.jpg" target="_blank" rel="noopener"><img src="./img/img16.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img17.jpg" target="_blank" rel="noopener"><img src="./img/img17.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img18.jpg" target="_blank" rel="noopener"><img src="./img/img18.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img19.jpg" target="_blank" rel="noopener"><img src="./img/img29.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img20.jpg" target="_blank" rel="noopener"><img src="./img/img20.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img21.jpg" target="_blank" rel="noopener"><img src="./img/img21.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img22.jpg" target="_blank" rel="noopener"><img src="./img/img22.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img23.jpg" target="_blank" rel="noopener"><img src="./img/img23.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img24.jpg" target="_blank" rel="noopener"><img src="./img/img24.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img25.jpg" target="_blank" rel="noopener"><img src="./img/img25.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img26.jpg" target="_blank" rel="noopener"><img src="./img/img26.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img27.jpg" target="_blank" rel="noopener"><img src="./img/img27.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img28.jpg" target="_blank" rel="noopener"><img src="./img/img28.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img29.jpg" target="_blank" rel="noopener"><img src="./img/img29.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img30.jpg" target="_blank" rel="noopener"><img src="./img/img30.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img31.jpg" target="_blank" rel="noopener"><img src="./img/img31.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img32.jpg" target="_blank" rel="noopener"><img src="./img/img32.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img33.jpg" target="_blank" rel="noopener"><img src="./img/img33.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img34.jpg" target="_blank" rel="noopener"><img src="./img/img34.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img35.jpg" target="_blank" rel="noopener"><img src="./img/img35.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img36.jpg" target="_blank" rel="noopener"><img src="./img/img36.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img37.jpg" target="_blank" rel="noopener"><img src="./img/img37.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img38.jpg" target="_blank" rel="noopener"><img src="./img/img38.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img39.jpg" target="_blank" rel="noopener"><img src="./img/img39.jpg" alt="Pantalla de inicio"></a>
+                <a href="./img/img40.jpg" target="_blank" rel="noopener"><img src="./img/img40.jpg" alt="Pantalla de inicio"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 Brynner Flores.</p>
+        </div>
+    </footer>
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,33 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio en Construcción</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brynner Flores — Fullstack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    const userTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const initialTheme = userTheme || systemTheme;
+    document.documentElement.setAttribute('data-theme', initialTheme);
+  </script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Brynner Flores</div>
+      <div class="nav-right">
+        <nav>
+          <a href="#about">Sobre mí</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#skills">Habilidades</a>
+        </nav>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <h1>Hola, soy <span class="highlight">Brynner Flores</span></h1>
+      <h2>Ingeniero de Sistemas & Desarrollador Fullstack</h2>
+      <p class="subtitle">
+        Más de 5 años construyendo aplicaciones web, móviles y de escritorio con enfoque en rendimiento, seguridad y experiencia de usuario.
+      </p>
+      <div class="contact-quick">
+        <div class="contact-item">
+          <span class="contact-label">📧 Correo:</span>
+          <span id="email-text">brynnerflores@outlook.com</span>
+          <button class="copy-btn" data-clipboard="brynnerflores@outlook.com" aria-label="Copiar correo">
+            <i class="fas fa-copy"></i>
+          </button>
+          <span class="copy-feedback" id="email-feedback"></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">📱 Celular:</span>
+          <span id="phone-text">+59167992777</span>
+          <button class="copy-btn" data-clipboard="+59167992777" aria-label="Copiar número">
+            <i class="fas fa-copy"></i>
+          </button>
+          <span class="copy-feedback" id="phone-feedback"></span>
+        </div>
+      </div>
+      <a href="assets/cv.pdf" class="cta-button" download>
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+    </div>
+  </section>
+  <section id="projects" class="section">
     <div class="container">
-      <div class="logo">PORTAFOLIO</div>
-
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-        </svg>
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-mobile-alt icon-inline"></i>
+            <h3>Univalle Móvil</h3>
+          </div>
+          <p>App multiplataforma con Flutter y .NET MAUI. Integración con Microsoft Graph y Office 365.</p>
+          <div class="tech-badges">
+            <span>Flutter</span>
+            <span>C#</span>
+            <span>.NET Core</span>
+          </div>
+          <a href="./projects/unimovil/index.html" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-mobile-alt icon-inline"></i>
+            <h3>Duralit S.A</h3>
+          </div>
+          <p>Interfaz administrativa con HTML, CSS, JS y backend en PHP/MySQL.</p>
+          <div class="tech-badges">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+          <a href="./projects/duralit/index.html" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-mobile-alt icon-inline"></i>
+            <h3>Kytcla - Educación Continua</h3>
+          </div>
+          <p>App móvil en Android (Java) para gestión de cursos en línea.</p>
+          <div class="tech-badges">
+            <span>Android</span>
+            <span>Java</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+          <a href="projects/kytcla/index.html" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-desktop icon-inline"></i>
+            <h3>SIET - Sistema de Información de Enfermedades Tropicales</h3>
+          </div>
+          <p>Aplicación de escritorio en Java con base de datos PostgreSQL.</p>
+          <div class="tech-badges">
+            <span>Java</span>
+            <span>NetBeans</span>
+            <span>PostgreSQL</span>
+          </div>
+          <a href="projects/siet/index.html" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
-
-      <h1>Portafolio en Construcción</h1>
-
-      <p>Estamos trabajando en crear una experiencia digital pulida y minimalista. Vuelve pronto para descubrir nuestro trabajo.</p>
-
-      <div class="divider"></div>
-
-      <div class="contact">
-        <p>Para consultas, contáctanos en:</p>
-        <a href="mailto:brynnerflores@outlook.com" class="email">brynnerflores@outlook.com</a>
+    </div>
+  </section>
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-paint-brush"></i> Frontend</h3>
+          <div class="icons">
+            <div class="icon-item" data-tech="html" title="HTML5"><i class="fab fa-html5"></i><span>HTML</span></div>
+            <div class="icon-item" data-tech="css" title="CSS3"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+            <div class="icon-item" data-tech="javascript" title="JavaScript"><i class="fab fa-js"></i><span>JavaScript</span></div>
+            <div class="icon-item" data-tech="typescript" title="TypeScript"><i class="fab fa-js"></i><span>TypeScript</span></div>
+            <div class="icon-item" data-tech="angular" title="Angular"><i class="fab fa-angular"></i><span>Angular</span></div>
+            <div class="icon-item" data-tech="bootstrap" title="Bootstrap"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="icons">
+            <div class="icon-item" data-tech="dotnet" title=".NET Core"><i class="fab fa-microsoft"></i><span>.NET</span></div>
+            <div class="icon-item" data-tech="nodejs" title="Node.js"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+            <div class="icon-item" data-tech="php" title="PHP"><i class="fab fa-php"></i><span>PHP</span></div>
+            <div class="icon-item" data-tech="java" title="Java"><i class="fab fa-java"></i><span>Java</span></div>
+            <div class="icon-item" data-tech="csharp" title="C#"><i class="fas fa-hashtag"></i><span>C#</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-mobile"></i> Móvil</h3>
+          <div class="icons">
+            <div class="icon-item" data-tech="flutter" title="Flutter"><i class="fas fa-mobile-alt"></i><span>Flutter</span></div>
+            <div class="icon-item" data-tech="dart" title="Dart"><i class="fas fa-feather"></i><span>Dart</span></div>
+            <div class="icon-item" data-tech="xamarin" title="Xamarin"><i class="fas fa-mobile-alt"></i><span>Xamarin</span></div>
+            <div class="icon-item" data-tech="maui" title=".NET MAUI"><i class="fas fa-cube"></i><span>MAUI</span></div>
+            <div class="icon-item" data-tech="android" title="Android"><i class="fab fa-android"></i><span>Android</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+          <div class="icons">
+            <div class="icon-item" data-tech="mysql" title="MySQL"><i class="fas fa-database"></i><span>MySQL</span></div>
+            <div class="icon-item" data-tech="postgresql" title="PostgreSQL"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+            <div class="icon-item" data-tech="sqlserver" title="SQL Server"><i class="fas fa-database"></i><span>SQL Server</span></div>
+            <div class="icon-item" data-tech="mongodb" title="MongoDB"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Herramientas</h3>
+          <div class="icons">
+            <div class="icon-item" data-tech="git" title="Git"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            <div class="icon-item" data-tech="firebase" title="Firebase"><i class="fas fa-fire"></i><span>Firebase</span></div>
+            <div class="icon-item" data-tech="dotnet" title="Visual Studio"><i class="fab fa-microsoft"></i><span>VS</span></div>
+            <div class="icon-item" data-tech="android" title="Android"><i class="fab fa-android"></i><span>Android Studio</span></div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>© 2025 Brynner Flores.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-    <script src="script.js"></script>
-  </body>
 </html>
